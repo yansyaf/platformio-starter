@@ -1,17 +1,24 @@
 {
   "libraries": {
+    "USE_ADC": true,
     "USE_DELAY": true,
     "USE_FIFO": true,
     "USE_SERIAL_PRINT": true
   },
   "parameters": {
     "arduino": {
+      "ADC_PIN_1": 34,
+      "ADC_READING_INTERVAL_1": 2000,
       "FIFO_SIZE": 32
     },
     "espidf": {
+      "ADC_PIN_1": 34,
+      "ADC_READING_INTERVAL_1": 2000,
       "FIFO_SIZE": 32
     },
     "zephyr": {
+      "ADC_PIN_1": 34,
+      "ADC_READING_INTERVAL_1": 2000,
       "FIFO_SIZE": 32
     }
   }

@@ -1,0 +1,10 @@
+{
+  "name": "ADCHandler",
+  "version": "1.0.0",
+  "description": "Handles ADC setup and read",
+  "authors": [
+    {
+      "name": "Yan Syafri Hidayat"
+    }
+  ]
+}
