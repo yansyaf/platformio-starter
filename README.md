@@ -9,6 +9,9 @@ A modular and extensible PlatformIO project template, this project use ESP32 and
 - ✅ Auto-generated `config.h` from `config.json`
 - ✅ Supports development and production builds
 - ✅ Library handlers for:
+  - ADC
+  - DAC
+  - Delay
   - FIFO
   - Serial Print
 
@@ -70,8 +73,6 @@ pio run -e dev -t upload
   - I2C
   - SPI
   - EEPROM
-  - ADC
-  - DAC
   - Crypto (SHA256, AES, HMAC via mbedtls)
   - OTA (Over The Air update)
 - Integrated OTA firmware update
