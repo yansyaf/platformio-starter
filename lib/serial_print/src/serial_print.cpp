@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-#if defined(ARDUINO)
+#if defined(USE_ARDUINO)
     #include <Arduino.h>
 
     void serial_print_init(void) {
@@ -23,9 +23,13 @@
         Serial.print(buffer);
     }
 
-#elif defined(ZEPHYR)
+#elif defined(USE_ZEPHYR)
     #include <zephyr/kernel.h>
     #include <zephyr/sys/printk.h>
+
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
 
     void serial_print_init(void) {
         // No init needed for printk
@@ -42,8 +46,16 @@
         va_end(args);
     }
 
-#elif defined(ESP_PLATFORM)  // ESP-IDF
+    #ifdef __cplusplus
+    }
+    #endif
+
+#elif defined(USE_ESPIDF)
     #include "esp_log.h"
+
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
 
     static const char *TAG = "SerialWrapper";
 
@@ -61,6 +73,10 @@
         esp_log_writev(ESP_LOG_INFO, TAG, fmt, args);
         va_end(args);
     }
+
+    #ifdef __cplusplus
+    }
+    #endif
 
 #else
     #warning "Unknown platform for serial_wrapper"

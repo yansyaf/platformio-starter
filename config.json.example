@@ -1,5 +1,6 @@
 {
   "libraries": {
+    "USE_DELAY": true,
     "USE_FIFO": true,
     "USE_SERIAL_PRINT": true
   },

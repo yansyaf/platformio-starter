@@ -1,5 +1,11 @@
 #include "fifo_handler.h"
 
+#if !defined(USE_ARDUINO)
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+#endif
+
 void fifo_init(fifo_t* fifo) {
     fifo->head = 0;
     fifo->tail = 0;
@@ -31,3 +37,9 @@ bool fifo_is_empty(const fifo_t* fifo) {
 bool fifo_is_full(const fifo_t* fifo) {
     return fifo->count == FIFO_SIZE;
 }
+
+#if !defined(USE_ARDUINO)
+    #ifdef __cplusplus
+    }
+    #endif
+#endif

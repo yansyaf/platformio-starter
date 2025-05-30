@@ -3,6 +3,9 @@
  */
 #include <config.h>
 
+#if USE_DELAY
+#include "delay_handler.h"
+#endif
 #if USE_FIFO
 #include "fifo_handler.h"
 #endif

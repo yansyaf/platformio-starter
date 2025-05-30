@@ -49,7 +49,7 @@ def main():
         lines.append(param_to_define(key, value))
 
     lines.append("")
-    lines.append("#endif // LIB_FLAGS_H\n")
+    lines.append("#endif // CONFIG_H\n")
 
     with open(output_path, "w") as f:
         f.write("\n".join(lines))
