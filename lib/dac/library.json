@@ -1,0 +1,10 @@
+{
+  "name": "DACHandler",
+  "version": "1.0.0",
+  "description": "Handles DAC setup and write",
+  "authors": [
+    {
+      "name": "Yan Syafri Hidayat"
+    }
+  ]
+}

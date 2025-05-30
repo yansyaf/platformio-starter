@@ -1,6 +1,7 @@
 {
   "libraries": {
     "USE_ADC": true,
+    "USE_DAC": true,
     "USE_DELAY": true,
     "USE_FIFO": true,
     "USE_SERIAL_PRINT": true
@@ -9,16 +10,28 @@
     "arduino": {
       "ADC_PIN_1": 34,
       "ADC_READING_INTERVAL_1": 2000,
+      "DAC_PIN_1": 25,
+      "DAC_MIN_LEVEL": 0,
+      "DAC_MAX_LEVEL": 100,
+      "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32
     },
     "espidf": {
       "ADC_PIN_1": 34,
       "ADC_READING_INTERVAL_1": 2000,
+      "DAC_PIN_1": 25,
+      "DAC_MIN_LEVEL": 0,
+      "DAC_MAX_LEVEL": 100,
+      "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32
     },
     "zephyr": {
       "ADC_PIN_1": 34,
       "ADC_READING_INTERVAL_1": 2000,
+      "DAC_PIN_1": 25,
+      "DAC_MIN_LEVEL": 0,
+      "DAC_MAX_LEVEL": 100,
+      "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32
     }
   }

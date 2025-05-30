@@ -2,7 +2,11 @@
 #include <lib_include.h>
 #include <version.h>
 
-void setup() {
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void app_main(void) {
   // variable declaration
   fifo_t my_fifo;
 
@@ -29,4 +33,6 @@ void setup() {
   }
 }
 
-void loop() {}
+#ifdef __cplusplus
+}
+#endif

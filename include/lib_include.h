@@ -6,6 +6,9 @@
 #if USE_ADC
 #include "adc_handler.h"
 #endif
+#if USE_DAC
+#include "dac_handler.h"
+#endif
 #if USE_DELAY
 #include "delay_handler.h"
 #endif

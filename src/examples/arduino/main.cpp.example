@@ -1,32 +1,48 @@
+#include <Arduino.h>
 #include <stdio.h>
 #include <lib_include.h>
 #include <version.h>
 
-void setup() {
-  // variable declaration
-  fifo_t my_fifo;
+// variable declaration
+fifo_t my_fifo;
 
+void setup() {
   // library initialization
   fifo_init(&my_fifo);
   serial_print_init();
+  adc_init();
+  dac_init();
 
-  // FIFO write n read
-  serial_print("Pushing values to FIFO:\n");
-  for (int i = 1; i <= 10; ++i) {
-    if (fifo_push(&my_fifo, i)) {
-      serial_printf("Pushed: %d\n", i);
-    } else {
-      serial_printf("FIFO Full. Could not push: %d\n", i);
-    }
-  }
-
-  serial_print("\nPopping values from FIFO:\n");
-  fifo_item_t value;
-  while (!fifo_is_empty(&my_fifo)) {
-    if (fifo_pop(&my_fifo, &value)) {
-      serial_printf("Popped: %d\n", value);
-    }
-  }
+  serial_print("System initialized.\n");
 }
 
-void loop() {}
+void loop() {
+  static uint32_t last_adc_time = 0;
+  static uint32_t last_dac_time = 0;
+  uint32_t now = millis(); 
+
+  // ADC read every 1000ms
+  if (now - last_adc_time >= 1000) {
+    last_adc_time = now;
+    uint16_t adc_value = adc_read_value(ADC_PIN_1);
+    if (fifo_push(&my_fifo, adc_value)) {
+      serial_printf("ADC Value pushed to FIFO: %d\n", adc_value);
+    } else {
+      serial_print("FIFO Full. ADC value not pushed.\n");
+    }
+  }
+
+  // DAC write every 1000ms
+  if (now - last_dac_time >= 1000) {
+    last_dac_time = now;
+    fifo_item_t value;
+    if (fifo_pop(&my_fifo, &value)) {
+      dac_write(value, DAC_PIN_1);
+      serial_printf("DAC Value written from FIFO: %d\n", value);
+    } else {
+      serial_print("FIFO Empty. No value to write to DAC.\n");
+    }
+  }
+
+  delay_ms(10); // small delay to prevent tight looping
+}
