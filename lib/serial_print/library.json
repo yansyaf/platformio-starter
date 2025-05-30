@@ -1,0 +1,10 @@
+{
+  "name": "Serial Print",
+  "version": "1.0.0",
+  "description": "Handles print message to serial port",
+  "authors": [
+    {
+      "name": "Yan Syafri Hidayat"
+    }
+  ]
+}

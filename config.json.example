@@ -1,0 +1,17 @@
+{
+  "libraries": {
+    "USE_FIFO": true,
+    "USE_SERIAL_PRINT": true
+  },
+  "parameters": {
+    "arduino": {
+      "FIFO_SIZE": 32
+    },
+    "espidf": {
+      "FIFO_SIZE": 32
+    },
+    "zephyr": {
+      "FIFO_SIZE": 32
+    }
+  }
+}
