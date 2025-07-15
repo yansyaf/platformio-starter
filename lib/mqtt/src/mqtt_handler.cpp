@@ -45,7 +45,7 @@ void reconnect() {
     }
 }
 
-void mqtt_setup() {
+void mqtt_init() {
     client.setServer(MQTT_SERVER, MQTT_PORT);
     client.setCallback(callback);
 }

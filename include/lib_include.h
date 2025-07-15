@@ -24,3 +24,6 @@
 #if USE_MQTT
 #include "mqtt_handler.h"
 #endif
+#if USE_EEPROM
+#include "eeprom_handler.h"
+#endif
