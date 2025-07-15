@@ -18,3 +18,6 @@
 #if USE_SERIAL_PRINT
 #include "serial_print.h"
 #endif
+#if USE_WIFI
+#include "wifi_handler.h"
+#endif
