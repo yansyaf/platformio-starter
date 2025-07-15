@@ -8,6 +8,7 @@ A modular and extensible PlatformIO project template, this project use ESP32 and
 - ✅ Configurable via `config.json`
 - ✅ Auto-generated `config.h` from `config.json`
 - ✅ Supports development and production builds
+- ✅ Supported frameworks: Arduino, ZephyrOS, ESP-IDF
 - ✅ Library handlers for:
   - ADC
   - DAC
@@ -37,7 +38,11 @@ cp config.json.example config.json
 
 Then modify `config.json` to suit your environment (e.g., enable/disable modules, change MQTT server, WiFi credentials, etc.).
 
-### 3. Build and Upload
+### 3. Copy and Modify Example
+
+Copy and modify example in `src/examples` folder into `src` folder. Use `main.cpp` for Arduino or `main.c` for ZephyrOS and ESP-IDF:
+
+### 4. Build and Upload
 
 Use PlatformIO to build and upload:
 
