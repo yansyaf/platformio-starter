@@ -12,8 +12,11 @@ A modular and extensible PlatformIO project template, this project use ESP32 and
   - ADC
   - DAC
   - Delay
+  - EEPROM
   - FIFO
+  - MQTT
   - Serial Print
+  - WiFi
 
 ## 🛠️ Getting Started
 
@@ -59,20 +62,17 @@ pio run -e dev -t upload
 ├── lib/                    # Modular handlers
 ├── scripts/                # Custom build scripts (hook installers, config parser)
 ├── src/                    # Source code (main.cpp, logic)
-├── config.json.example     # Example config file
+├── config.json.example     # Example config file, copy to config.json
 ├── platformio.ini          # PlatformIO configuration
 ```
 
 ## ✅ TODO
 
 - Library handlers for:
-  - WiFi
   - Cellular
-  - MQTT
   - RS485
   - I2C
   - SPI
-  - EEPROM
   - Crypto (SHA256, AES, HMAC via mbedtls)
   - OTA (Over The Air update)
 - Integrated OTA firmware update
