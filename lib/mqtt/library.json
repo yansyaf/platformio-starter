@@ -1,0 +1,10 @@
+{
+  "name": "MQTTHandler",
+  "version": "1.0.0",
+  "description": "Handles MQTT setup and message send/receive",
+  "authors": [
+    {
+      "name": "Yan Syafri Hidayat"
+    }
+  ]
+}

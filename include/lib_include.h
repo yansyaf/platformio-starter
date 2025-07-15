@@ -21,3 +21,6 @@
 #if USE_WIFI
 #include "wifi_handler.h"
 #endif
+#if USE_MQTT
+#include "mqtt_handler.h"
+#endif

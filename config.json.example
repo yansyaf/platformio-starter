@@ -17,7 +17,15 @@
       "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32,
       "WIFI_SSID": "ssid",
-      "WIFI_PASSWORD": "password"
+      "WIFI_PASSWORD": "password",
+      "MQTT_SERVER": "192.168.1.1",
+      "MQTT_PORT": 1883,
+      "MQTT_USER": "user",
+      "MQTT_PASS": "password",
+      "MQTT_TOPIC_DATA": "data",
+      "MQTT_TOPIC_COMMAND": "command",
+      "MQTT_TEST_MESSAGE": "message",
+      "MQTT_SENDING_INTERVAL": 5000
     },
     "espidf": {
       "ADC_PIN_1": 34,
@@ -28,7 +36,15 @@
       "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32,
       "WIFI_SSID": "ssid",
-      "WIFI_PASSWORD": "password"
+      "WIFI_PASSWORD": "password",
+      "MQTT_SERVER": "192.168.1.1",
+      "MQTT_PORT": 1883,
+      "MQTT_USER": "user",
+      "MQTT_PASS": "password",
+      "MQTT_TOPIC_DATA": "data",
+      "MQTT_TOPIC_COMMAND": "command",
+      "MQTT_TEST_MESSAGE": "message",
+      "MQTT_SENDING_INTERVAL": 5000
     },
     "zephyr": {
       "ADC_PIN_1": 34,
@@ -39,7 +55,15 @@
       "DAC_MIN_BIT": 8,
       "FIFO_SIZE": 32,
       "WIFI_SSID": "ssid",
-      "WIFI_PASSWORD": "password"
+      "WIFI_PASSWORD": "password",
+      "MQTT_SERVER": "192.168.1.1",
+      "MQTT_PORT": 1883,
+      "MQTT_USER": "user",
+      "MQTT_PASS": "password",
+      "MQTT_TOPIC_DATA": "data",
+      "MQTT_TOPIC_COMMAND": "command",
+      "MQTT_TEST_MESSAGE": "message",
+      "MQTT_SENDING_INTERVAL": 5000
     }
   }
 }
