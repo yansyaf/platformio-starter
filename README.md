@@ -40,7 +40,9 @@ Then modify `config.json` to suit your environment (e.g., enable/disable modules
 
 ### 3. Copy and Modify Example
 
-Copy and modify example in `src/examples` folder into `src` folder. Use `main.cpp` for Arduino or `main.c` for ZephyrOS and ESP-IDF:
+Copy and modify example file in `src/examples/arduino` or `src/examples/espidf` or `src/examples/zephyr` to `src`. 
+
+Use `main.cpp` for Arduino or `main.c` for ZephyrOS and ESP-IDF.
 
 ### 4. Build and Upload
 
