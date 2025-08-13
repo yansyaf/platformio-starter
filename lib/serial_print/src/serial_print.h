@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-void serial_print_init(void);
+void serial_print_init(int baudrate);
 void serial_print(const char *msg);
 void serial_printf(const char *fmt, ...);
 

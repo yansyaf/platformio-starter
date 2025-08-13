@@ -5,8 +5,8 @@
 #if defined(USE_ARDUINO)
     #include <Arduino.h>
 
-    void serial_print_init(void) {
-        Serial.begin(115200);
+    void serial_print_init(int baudrate) {
+        Serial.begin(baudrate);
         while (!Serial) { ; }
     }
 
