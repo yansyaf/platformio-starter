@@ -3,9 +3,11 @@
     "USE_ADC": true,
     "USE_DAC": true,
     "USE_DELAY": true,
+    "USE_EEPROM": true,
     "USE_FIFO": true,
+    "USE_MQTT": true,
     "USE_SERIAL_PRINT": true,
-    "USE_WIFI": true,
+    "USE_WIFI": true
   },
   "parameters": {
     "arduino": {
@@ -25,7 +27,9 @@
       "MQTT_TOPIC_DATA": "data",
       "MQTT_TOPIC_COMMAND": "command",
       "MQTT_TEST_MESSAGE": "message",
-      "MQTT_SENDING_INTERVAL": 5000
+      "MQTT_SENDING_INTERVAL": 5000,
+      "DAC_BIT_SIZE": 8,
+      "EEPROM_DEFAULT_SIZE": 512
     },
     "espidf": {
       "ADC_PIN_1": 34,
@@ -44,7 +48,9 @@
       "MQTT_TOPIC_DATA": "data",
       "MQTT_TOPIC_COMMAND": "command",
       "MQTT_TEST_MESSAGE": "message",
-      "MQTT_SENDING_INTERVAL": 5000
+      "MQTT_SENDING_INTERVAL": 5000,
+      "DAC_BIT_SIZE": 8,
+      "EEPROM_DEFAULT_SIZE": 512
     },
     "zephyr": {
       "ADC_PIN_1": 34,
@@ -63,7 +69,9 @@
       "MQTT_TOPIC_DATA": "data",
       "MQTT_TOPIC_COMMAND": "command",
       "MQTT_TEST_MESSAGE": "message",
-      "MQTT_SENDING_INTERVAL": 5000
+      "MQTT_SENDING_INTERVAL": 5000,
+      "DAC_BIT_SIZE": 8,
+      "EEPROM_DEFAULT_SIZE": 512
     }
   }
 }
